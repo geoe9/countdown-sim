@@ -24,7 +24,7 @@ def select_characters() -> str:
     """
     Forms a string of 9 random letters, consisting of a specific number of consonents or vowels selected by the user.
     """
-    rand_letters = "" #instantiate string for appending letters to
+    rand_letters = "" #string for appending letters to
     print("Please choose your 9 letters. Enter a 'c' for a consonant or a 'v' for a vowel.")
     while len(rand_letters) < 9:
         #lowercase user input to simplify following if statements
@@ -44,13 +44,13 @@ def word_lookup(letters: str, words: list, sorted_words: list) -> list:
     """
     #order letters alphabetically
     sorted_letters = "".join(sorted(letters))
-    #instantiate list for appending all alphabetic letter combinations
+    #list for appending all alphabetic letter combinations
     letter_combinations = []
     #generate all alphabetic combinations of letters from length 9 to 2
     for i in range(9,1,-1):
         for substring_letter_list in combinations(sorted_letters,i):
             letter_combinations.append("".join(substring_letter_list))
-    #instantiate list for appending valid words, will be returned
+    #list for appending valid words, will be returned
     valid_words = []
     for i in range(0,len(words)-1):
         if sorted_words[i] in letter_combinations: #check if any letter combinations match with a sorted word from the dictionary
@@ -78,8 +78,8 @@ def game() -> int:
     Runs the countdown game. Will keep going until the user decides they wish to exit.
     """
     print_title()
-    ply_total_points = 0 #instantiate variable for summing player points
-    ply_total_rounds = 0 #instantiate variable for tracking number of rounds the player has played
+    ply_total_points = 0 #int for summing player points
+    ply_total_rounds = 0 #int for tracking number of rounds the player has played
     #ask user for name of file they wish to read
     words, sorted_words = dictionary_reader(input("Name of dictionary file to use: "))
     inp = ""
