@@ -1,9 +1,10 @@
 import random
 from itertools import combinations
-#letter distributions according to http://www.thecountdownpage.com/letters.htm
+
 CONSONANTS = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z']
 VOWELS = ['A', 'E', 'I', 'O', 'U']
 
+#letter distributions according to http://www.thecountdownpage.com/letters.htm
 C_WEIGHTS = [2,3,6,2,3,2,1,1,5,4,8,4,1,9,9,9,1,1,1,1,1]
 V_WEIGHTS = [15,21,13,13,5]
 
